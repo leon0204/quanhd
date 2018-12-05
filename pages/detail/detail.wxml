@@ -1,0 +1,61 @@
+<view class="container1">
+  <view class="serach">
+    <view class="serach-inner ">
+      <view class="serach-input">
+        <image class="serach-input-button" src='../../search.png'></image>
+        面膜
+      </view>
+    </view>
+  </view>
+  <view class="channel ">
+    <p>全部</p>
+    <p>女装</p>
+    <p>美食</p>
+    <p>百货</p>
+    <p>科技</p>
+  </view>
+  <view class="banner ">
+    <image class='banner-img' src='../../banner4.jpg'>
+    </image>
+  </view>
+  <view class="list">
+
+    <view class='list-item' wx:for="{{listData}}" wx:key="ID">
+      <view>
+        <image class='list-imgOne' src='{{item.ImgOne}}'></image>
+      </view>
+      <view class='list-item-right'>
+        <view class='list-item-top'>
+
+
+
+          <image wx:if="{{item.ShopType=='天猫'}}" src='/tm.svg'></image>
+          <image wx:if="{{item.ShopType=='淘宝'}}" src='/tb.png'></image>
+          {{item.Name}}
+        </view>
+
+        <view class='list-item-mid'>
+          <view>{{item.ShopType}} {{item.Price}}元</view>
+
+          <view class='buy-count' >
+            {{item.SaleMonthCount}}人已购
+          </view>
+        </view>
+
+
+        <view class='list-item-price'>
+          <!-- 券后价格 -->
+          <view class='price-after'>
+            ¥{{item.Price}}
+          </view>
+          <!-- 券力度 -->
+          <view class='ticket'>
+            {{item.TicketSum}}券
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+<navigator url="../index/index">回到首页</navigator>
