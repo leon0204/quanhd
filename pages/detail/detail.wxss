@@ -1,0 +1,186 @@
+/* pages/detail/detail.wxss */
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+  /* column direction 所以是竖直方向是主轴，如果是row 则水平是主轴 */
+  justify-content: flex-start;
+  /* 交叉轴 */
+  /* align-items: flex-start; */
+  align-items: center;
+  /* height: 667px; */
+  background-color: white;
+}
+
+.detail-image{
+  background-color: yellow;
+  height:480rpx;
+  width:96%;
+}
+
+.detail-image image{
+  background-color: red;  
+  width: 100%;
+  height: 100%;
+  
+}
+
+.detail-title{
+  background-color: white;
+  height: 110rpx;
+  width: 98%;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+
+}
+
+.detail-price{
+  background-color: white;
+  display:flex;
+  width:97%;
+  justify-content: flex-start;
+}
+
+.price-left{
+  background-color: white;
+  display: flex;
+}
+
+.price-qhj{
+  background-color: white;
+  font-size: 28rpx;
+  color: rgb(20, 2, 2);
+  line-height: 66rpx;
+}
+
+.price-after{
+  color: red;
+  font-size: 50rpx;
+  font-weight: 700;
+  margin-left: 10rpx;
+}
+
+.price{
+  background-color: white;
+  font-size: 34rpx;
+  color:rgba(128, 128, 128, 0.568);
+  line-height: 66rpx;
+  text-decoration: line-through;
+  margin-left: 20rpx;
+}
+
+.price-right{
+  margin-left: auto;
+  font-size:26rpx;
+  line-height:66rpx;
+
+}
+
+
+.line {
+  margin:0 auto;
+  border-bottom:16rpx solid #ccc;
+  width:90%;
+  height:20rpx;
+}
+
+.ticketCopy{
+  height:260rpx;
+  width:87%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.ticketCopy-top{
+  background:linear-gradient(to right,rgb(231, 117, 23),rgb(233, 6, 6));
+  height: 90rpx;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  /* border-bottom:1px dashed red */
+  border-radius: 6rpx 6rpx 0 0;
+  color: white;
+  font-weight: 600;
+}
+
+.top-text{
+  margin-left: 16rpx;
+}
+
+.ticketCopy-top image{
+  height:40rpx;
+  width:40rpx;
+}
+
+.ticketCopy-bottom{
+  text-align: center;
+  background-color: rgba(224, 210, 220, 0.932);
+  border-radius:0 0 6rpx 6rpx;
+  border:1rpx dashed red;
+  padding-top:12px;
+  font-weight: bold;
+}
+
+.ticket{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:rgba(170, 157, 157, 0.121);
+  height:260rpx;
+  width:95%;
+  margin-top:20rpx;
+  
+}
+
+.ticket-real {
+  display: flex;
+  background-color: white;
+  width: 90%;
+  height: 180rpx;
+  border-radius:10rpx;
+}
+
+
+.ticket-left{
+  display:flex;
+  align-items:center;
+}
+
+.left-money{
+  text-align:center;
+  width: 40%;
+  font-size:57rpx;
+  color:red;
+  font-weight:bold;
+}
+
+.left-detail{
+  display:flex;
+  flex-direction:column;
+}
+
+.left-date-surplus{
+  font-size:30rpx;
+}
+
+.left-date-end{
+  font-size:26rpx
+}
+
+
+
+.ticket-right{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-left:auto;
+  width:34%;
+  background:linear-gradient(to right,rgb(231, 117, 23),rgb(233, 6, 6));
+  color:white;
+  font-weight:bold;
+  border-radius:0 10rpx 10rpx 0;
+}

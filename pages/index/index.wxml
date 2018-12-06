@@ -25,19 +25,18 @@
         <image class='list-imgOne' src='{{item.ImgOne}}'></image>
       </view>
       <view class='list-item-right'>
-        <view class='list-item-top'>
-
-
-
-          <image wx:if="{{item.ShopType=='天猫'}}" src='/tm.svg'></image>
-          <image wx:if="{{item.ShopType=='淘宝'}}" src='/tb.png'></image>
-          {{item.Name}}
-        </view>
+        <navigator url="../detail/detail">
+          <view class='list-item-top'>
+            <image wx:if="{{item.ShopType=='天猫'}}" src='/tm.svg'></image>
+            <image wx:if="{{item.ShopType=='淘宝'}}" src='/tb.png'></image>
+            {{item.Name}}
+          </view>
+        </navigator>
 
         <view class='list-item-mid'>
           <view>{{item.ShopType}} {{item.Price}}元</view>
 
-          <view class='buy-count' >
+          <view class='buy-count'>
             {{item.SaleMonthCount}}人已购
           </view>
         </view>
@@ -46,11 +45,11 @@
         <view class='list-item-price'>
           <!-- 券后价格 -->
           <view class='price-after'>
-            ¥{{item.Price}}
+            ¥{{item.PriceAfter}}
           </view>
           <!-- 券力度 -->
           <view class='ticket'>
-            {{item.TicketSum}}券
+            {{item.TicketPrice}}券
           </view>
         </view>
       </view>

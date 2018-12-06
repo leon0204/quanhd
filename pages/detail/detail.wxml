@@ -1,0 +1,60 @@
+<view class="container" wx:for="{{listData}}" wx:key="ID">
+  <!-- 详情页主图 -->
+  <view class='detail-image'>
+    <image src='{{item.ImgOne}}'></image>
+  </view>
+  <!-- 详情页标题 -->
+  <view class='detail-title'>
+    {{item.Name}}
+  </view>
+  <!-- 详情页价格栏 -->
+  <view class='detail-price'>
+    <view class='price-left'>
+      <view class='price-qhj'>券后价</view>
+      <view class='price-after'>¥{{item.PriceAfter}}</view>
+      <view class='price'>¥{{item.Price}}</view>
+    </view>
+
+    <view class='price-right'>
+      <view class='sales-count'>{{item.SaleMonthCount}}人已购</view>
+
+    </view>
+  </view>
+
+  <view class='line'></view>
+
+  <view class='ticketCopy'>
+    <view class='ticketCopy-top'>
+      <view>
+        <image src='/copy.svg' />
+      </view>
+      <view class='top-text'>一键复制淘口令</view>
+    </view>
+    <view class='ticketCopy-bottom'>
+      长按复制文字，打开【手机淘宝】即可享受领取优惠券！
+    </view>
+  </view>
+
+  <view class='ticket'>
+    <view class='ticket-real'>
+      <view class='ticket-left'>
+        <view class='left-money'>
+          ¥10
+        </view>
+        <view class='left-detail' >
+         <view class='left-date-surplus'>优惠券使用期限</view>
+        <view class='left-date-end'>{{item.TicketStartTime}}-{{item.TicketEndTime}}</view>
+
+        </view>
+       
+
+
+      </view>
+      <view class='ticket-right'>
+        立即领券
+      </view>
+    </view>
+  </view>
+  <view class='goodsdetail'>
+  </view>
+</view>
